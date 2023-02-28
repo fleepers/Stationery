@@ -1,0 +1,155 @@
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+@keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%,-60%);
+    }
+  }
+
+html{
+    font-family: Calibri, Helvetica, sans-serif
+}
+
+#sitebody{
+    background-color:rgb(69, 108, 194);
+    background-image: url(res/College.bmp);
+    transition:background-image 2s;
+}
+
+#stationarystock{
+    background-color: white;
+    border-collapse: collapse;
+    width:100%;
+    text-align: center;
+}
+
+#loginbox{
+    position:fixed;
+    top:50%;
+    left:50%;
+    text-align: center;
+    border: none;
+    opacity: 0;
+    transform: translate(-50%,-50%);
+    animation: fadeInUp 2s ease-in-out forwards;
+}
+#collegeimg{
+    width:50%;
+    margin-bottom: 30%;
+}
+
+#loginbutton{
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+}
+
+#mainsite{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    max-width: fit-content;
+    background-color: rgba(77, 77, 77, 0.377);
+    padding:40px;
+    gap:30px;
+    top:50%;
+    left:50%;
+    height: 100%;
+    transform: translate(-50%,-50%);
+    position: fixed;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+#mainsite select{
+    padding:20px;
+}
+#mainsite #datapulled{
+    border: 8px black;
+    width:100%;
+    height:300px;
+}
+
+#cartdiv{
+    width:100%;
+    align-content: center;
+    align-self: stretch;
+    flex:1;
+    transform: translateX(5px);
+    background-color: rgb(255, 255, 255, 0.2);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#cart{
+    background-color: white;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width:100%;
+    text-align: center;
+}
+
+#stationarystock th{
+    position: sticky;
+    top:0;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    height:60px;
+    background-color: white;
+}
+
+#cart th{
+    position: sticky;
+    top:0;
+    border-bottom: 2px solid black;
+    height:60px;
+    background-color: white;
+
+}
+
+#stationarystock td{
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    padding:10px;
+}
+
+#cart td{
+    border-bottom: 2px solid black;
+    padding:10px;
+}
+
+#stationarydatarow{
+    transition: background-color 0.2s;
+}
+
+#stationarydatarow:hover{
+    background-color: rgb(207, 207, 207);
+}
+
+.grand-total{
+    background-color: rgb(58, 212, 117);
+}
+
