@@ -53,6 +53,13 @@ html{
     transform: translate(-50%,-50%);
     animation: fadeInUp 2s ease-in-out forwards;
 }
+#loginbox p{
+    font-size: 30px;
+    color:white;
+    padding:10px;
+    border-radius: 7px;
+    background-color: black;
+}
 #collegeimg{
     width:50%;
     margin-bottom: 30%;
