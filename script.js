@@ -48,14 +48,14 @@ async function sendMail(x, y){
             toRecipients: [
               {
                 emailAddress: {
-                  address: "tteven@grantham.ac.uk"
+                  address: sendusers[y] + "@grantham.ac.uk"
                 }
               }
             ],
             ccRecipients: [
               {
                 emailAddress: {
-                  address: sendusers[y] + "@grantham.ac.uk"
+                  address: "staylor@grantham.ac.uk"
                 }
               }
             ]
@@ -352,8 +352,6 @@ function removeMatchingArray(arr, match) {
     }
   }
 }
-
-//============== FRONTEND FUNCTIONS ==============
 
 
 
