@@ -13,8 +13,8 @@
 // Connect to MySQL database
 $servername = "localhost:3306";
 $username = "root";
-$password = "thaw001";
-$dbname = "stationary";
+$password = "pass";
+$dbname = "stationery";
 
 $currentdb = 'items';
 
