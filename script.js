@@ -4,18 +4,7 @@ const authority = "https://login.microsoftonline.com/9431e0b9-00a8-40f7-a077-5f0
 var authtokenfound = "";
 var loggedinuser = "";
 
-const sendusers = ["n/a", "djohnson", "djohnson", "elangton", 
-                  "smumford", "smumford", "shigh", "aharrison", 
-                  "jmeenaghan", "thart", "thart", "ctemprell", 
-                  "kduller", "kduller", "kduller", "djohnson", 
-                  "jmeenaghan", "jmeenaghan", "tscarborough", 
-                  "jrandle", "tpringle", "tpringle", "ctemprell",
-                  "shigh", "shigh", "ibrooks", "jbrunt", "ibrooks",
-                  "hgunby", "ibrooks", "tpringle", "hgunby", "jbrunt",
-                  "hgunby", "jbrunt", "tpringle", "tpringle", "tpringle",
-                  "hgunby", "hgunby", "speacock", "speacock", "speacock",
-                  "ibrooks", "lsteptoe", "elangton", "lsteptoe", "lsteptoe",
-                  "lsteptoe", "lsteptoe", "jbrunt", "jbrunt", "hgunby", "staylor"];
+const sendusers = [];
 
 var currentcart = [];
 var carttotal = 0;
@@ -48,14 +37,14 @@ async function sendMail(x, y){
             toRecipients: [
               {
                 emailAddress: {
-                  address: sendusers[y] + "@grantham.ac.uk"
+                  address: "email here"
                 }
               }
             ],
             ccRecipients: [
               {
                 emailAddress: {
-                  address: "staylor@grantham.ac.uk"
+                  address: "cc here"
                 }
               }
             ]
