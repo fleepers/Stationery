@@ -3,18 +3,21 @@
 <head>
 <link rel="stylesheet" href="datastyle.css">
 <script src="script.js"></script>
+<style>
+</style>
 </head>
 <body>
 
 <div id=topbar>
 </div>
+<input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Search for items..">
 <?php
 
 // Connect to MySQL database
 $servername = "localhost:3306";
 $username = "root";
-$password = "pass";
-$dbname = "stationery";
+$password = "Q2#8CcRFB8H4";
+$dbname = "Stationery";
 
 $currentdb = 'items';
 
@@ -33,7 +36,7 @@ if ($result->num_rows > 0) {
   echo "<table id='stationarystock'>";
   echo "<tr><th>Item ID</th><th>Product</th><th>Price (£)</th></tr>"; // Replace with your actual column names
   while ($row = $result->fetch_assoc()) {
-    echo "<tr id='stationarydatarow' onclick='getRowData(event)'>";
+    echo "<tr class='stationarydatarow' onclick='getRowData(event)'>";
     echo "<td>" . $row["ID"] . "</td>";
     echo "<td>" . $row["Item"] . "</td>";
     echo "<td>" . $row["Price"] . "</td>";
@@ -47,5 +50,36 @@ if ($result->num_rows > 0) {
 // Close MySQL connection
 $conn->close();
 ?>
-<body>
+
+<script>
+  function filterTable() {
+    const input = document.getElementById("searchInput");
+    const filter = input.value.toUpperCase();
+    const table = document.getElementById("stationarystock");
+    const trs = table.getElementsByClassName("stationarydatarow");
+
+    for (let i = 0; i < trs.length; i++) {
+      const tds = trs[i].getElementsByTagName("td");
+      let foundMatch = false;
+
+      for (let j = 0; j < tds.length; j++) {
+        if (tds[j]) {
+          const txtValue = tds[j].textContent || tds[j].innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            foundMatch = true;
+            break;
+          }
+        }
+      }
+
+      if (foundMatch) {
+        trs[i].style.display = "";
+      } else {
+        trs[i].style.display = "none";
+      }
+    }
+  }
+</script>
+
+</body>
 </html>
