@@ -279,8 +279,8 @@ function createHTMLTable(arr, total) {
         processArray(arr);
       }
     });
-    buttonCell.appendChild(addButton);
     buttonCell.appendChild(removeButton);
+    buttonCell.appendChild(addButton);
     row.appendChild(buttonCell);
 
     tbody.appendChild(row);
