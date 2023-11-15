@@ -168,5 +168,6 @@ html{
 
 .grand-total{
     background-color: rgb(58, 212, 117);
+    position:static;
 }
 
